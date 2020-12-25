@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Euler_4</title>
+</head>
+<body>
+   
+</body>
+<script>
+   
+   // let number = 0
+   // number = 111000
+   // let str = number.toString()
+   // let reverse = str.split('').reverse().join('')
+   // console.log(reverse)
+   // console.log(str)
+   // console.log(typeof(str))
+   
+function palindrom() { 
+   let lastPalindrom = 0
+   for(let i = 999; i > 99; i--) {
+      for(let j = 999; j > 99; j--) {
+         let number = j*i
+         // let str = number.toString()
+         // let reverse = str.split('').reverse().join('')
+         let reverse = '' + number;
+         if(reverse === reverse.split("").reverse().join("") && number > lastPalindrom) {
+            lastPalindrom = number 
+         }
+      }
+   }   
+   return lastPalindrom
+}
+
+console.log('=>', palindrom())
+</script>
+</html>

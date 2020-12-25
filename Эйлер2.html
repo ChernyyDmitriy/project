@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Euler_2</title>
+</head>
+<body>
+   <h1>Откройте консоль!</h1>
+</body>
+<script>
+
+let x1 = 0, x2 = 1, sum = 0, currentNum = 0, i = 0
+
+while(currentNum<4000000) {
+	i++
+	currentNum = x1 + x2
+	x1 = x2 
+	x2 = currentNum
+	if (currentNum % 2 == 0) {
+		console.log(`${i} ->`, currentNum)
+		sum += currentNum
+	}
+}
+console.log('\nСУММА =>', sum)
+   
+</script>
+</html>
